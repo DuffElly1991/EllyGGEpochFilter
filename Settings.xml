@@ -1,0 +1,10 @@
+<Settings xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- Change the following to point to where your last epoch installation is -->
+	<!-- Found in game by going to:
+		Settings
+		Manage Loot Filters
+		+
+		Open Filter Folder
+	-->
+	<LastEpochFilterFolder>/home/elly/Documents/Last Epoch/Filters</LastEpochFilterFolder>
+</Settings>
