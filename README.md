@@ -28,6 +28,8 @@ To make your own filter in game:
 
       (You do not need to specify number on item or any of the advanced settings)
 
+  Optional: change the rune of shattering targets rule to control what items to show for shattering
+
 ----------------------------------------------------------------------------------
 Setup instructions from source code:
 
