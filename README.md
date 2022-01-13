@@ -9,21 +9,23 @@ To make your own filter in game:
   Create a new rule (Add Rule button) or edit an existing template (click on it in the list)
 
   Set the class
-    Click add condition
-    Select Class Requirement in condition dropdown
-    Select the class in dropdown
+  - Click add condition
+  - Select Class Requirement in condition dropdown
+  - Select the class in dropdown
 
   Set the items you want
-    Click add condition
-    Select item type in condition dropdown
-    Select the item types you want in type dialogue
-      (Subtypes are not set due to a limitation in the editor: subtypes are only selectable if you have just one item type.
+  - Click add condition
+  - Select item type in condition dropdown
+  - Select the item types you want in type dialogue
+
+    (Subtypes are not set due to a limitation in the editor: subtypes are only selectable if you have just one item type.
       Because of this the filter builder will guess at what the best subtype is.  Other subtypes are shown as well if they have enough affixes)
 
   Set the affixes you want
-    Click add condition
-    Select affix in condition dropdown
-    Add affixes in the affix dialogue
+  - Click add condition
+  - Select affix in condition dropdown
+  - Add affixes in the affix dialogue
+
       (You do not need to specify number on item or any of the advanced settings)
 
 ----------------------------------------------------------------------------------
