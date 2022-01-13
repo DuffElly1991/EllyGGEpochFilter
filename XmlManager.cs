@@ -13,6 +13,11 @@ namespace EllyGGEpochFilter
 		private xmlNode root;
 		private xmlNode current;
 
+		public XmlManager()
+		{
+			this.indent = "  ";
+		}
+
 		public XmlManager(string fileIndent)
 		{
 			this.indent = fileIndent;
@@ -37,7 +42,7 @@ namespace EllyGGEpochFilter
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Adding nodes to XML
-		private void addNode(xmlNode node)
+		public void addNode(xmlNode node)
 		{
 			if(root == null)
 			{
@@ -53,6 +58,7 @@ namespace EllyGGEpochFilter
 				}
 
 				current.addNode(node);
+				node.parent = current;
 			}
 		}
 
@@ -80,7 +86,8 @@ namespace EllyGGEpochFilter
 			if(current.parent == null)
 			{
 				current = root;
-				//This line should happen when the end of the xml is reached
+				return;
+				//This should happen when the end of the xml is reached
 			}
 			current = current.parent;
 		}
@@ -100,6 +107,10 @@ namespace EllyGGEpochFilter
 
 		public void addLineToMultiLineComment(string lineContent)
 		{
+			if(current == null)
+			{
+				throw new Exception("Error: in attempt to add value to multi-line comment: 'current' is Null");
+			}
 			if(current.type != NodeType.multiLineComment)
 			{
 				throw new Exception("Error: attempt to add line to a multi line comment but we are actually in a \"" + current.type.ToString() + "\"");
@@ -138,6 +149,10 @@ namespace EllyGGEpochFilter
 			}
 
 
+			if(currentLine == "")
+			{
+				return;
+			}
 			if(currentLine.Contains("<!--") && currentLine.Contains("-->"))
 			{
 				//This is a single line comment
@@ -173,9 +188,13 @@ namespace EllyGGEpochFilter
 
 				string label;
 				string value = null;
-				if(space == -1 || space >= end - 1)
+				if(space == -1)
 				{
 					label = currentLine.Substring(start, end - start);
+				}
+				else if(space >= end - 1)
+				{
+					label = currentLine.Substring(start, end - start - 1);
 				}
 				else
 				{
@@ -308,6 +327,29 @@ namespace EllyGGEpochFilter
 			{
 				throw new Exception("Error: attempt to add child node to an invalid NodeType");
 			}
+		}
+
+		public xmlNode Clone()
+		{
+			return Clone(null);
+		}
+		public xmlNode Clone(xmlNode newParent)
+		{
+			xmlNode newNode = new xmlNode(null, this.type, this.label, this.value);
+			if(this.children != null)
+			{
+				foreach(xmlNode i in this.children)
+				{
+					newNode.addNode(i.Clone(newNode));
+				}
+			}
+
+			return newNode;
+		}
+
+		public override string ToString()
+		{
+			return this.ToString(0, "  ");
 		}
 
 		public string ToString(int depth, string indent)

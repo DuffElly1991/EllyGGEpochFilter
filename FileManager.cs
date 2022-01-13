@@ -9,36 +9,47 @@ namespace EllyGGEpochFilter
 		{
 			content = null;
 
-			using (FileStream fs = new FileStream(Path.Combine(folder, fileName.Trim()), FileMode.Open))
+			try
 			{
-				using (StreamReader sr = new StreamReader(fs))
+				using (FileStream fs = new FileStream(Path.Combine(folder, fileName.Trim()), FileMode.Open))
 				{
-					try
+					using (StreamReader sr = new StreamReader(fs))
 					{
 						content = sr.ReadToEnd();
 					}
-					catch(Exception e)
-					{
-						errorMessage = e.ToString();
-						return false;
-					}
 				}
+			}
+			catch(Exception e)
+			{
+				errorMessage = e.ToString();
+				return false;
 			}
 
 			errorMessage = null;
 			return true;
 		}
 
-		public static void SaveFile(string folder, string fileName, string content)
+		public static bool SaveFile(string folder, string fileName, string content, out string errorMessage)
 		{
-			using (FileStream fs = new FileStream(Path.Combine(folder, fileName.Trim()), FileMode.Create))
+			try
 			{
-				using (StreamWriter sw = new StreamWriter(fs))
+				using (FileStream fs = new FileStream(Path.Combine(folder, fileName.Trim()), FileMode.Create))
 				{
-					sw.WriteLine(content);
-					sw.Flush();
+					using (StreamWriter sw = new StreamWriter(fs))
+					{
+						sw.WriteLine(content);
+						sw.Flush();
+					}
 				}
 			}
+			catch(Exception e)
+			{
+				errorMessage = e.ToString();
+				return false;
+			}
+
+			errorMessage = null;
+			return true;
 		}
 	}
 }
