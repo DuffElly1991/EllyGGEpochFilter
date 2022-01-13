@@ -72,10 +72,10 @@ namespace EllyGGEpochFilter
 			Console.WriteLine("Successfully read in settings file \"Settings.xml\"");
 
 			string informationGathererFileName = "EllyGG Information Gatherer.xml";
-			if(!FileManager.ReadFile("", informationGathererFileName, out settingsFileContent, out errorMessage))
+			if(!FileManager.ReadFile(filterFolder, informationGathererFileName, out settingsFileContent, out errorMessage))
 			{
 				//Error occured, so check the other location 
-				if(!FileManager.ReadFile(filterFolder, informationGathererFileName, out settingsFileContent, out errorMessage))
+				if(!FileManager.ReadFile("", informationGathererFileName, out settingsFileContent, out errorMessage))
 				{
 					//Error occured reading file
 					Console.WriteLine("Error occured when trying to read file \"" + informationGathererFileName);
