@@ -3,6 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
+	<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+	<PublishTrimmed>true</PublishTrimmed>
+	<TrimMode>CopyUsed</TrimMode>
   </PropertyGroup>
-
 </Project>

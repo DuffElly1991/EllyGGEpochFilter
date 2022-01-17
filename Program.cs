@@ -8,6 +8,10 @@ namespace EllyGGEpochFilter
     {
 		static void Main(string[] args)
         {
+			//Publish notes:
+			//dotnet publish --runtime linux-x64 /p:PublishSingleFile=true
+			//dotnet publish --runtime win10-x64 /p:PublishSingleFile=true
+
 			//We don't use args, so if there are any arguments then show message and exit
 			if(args.Length > 0)
 			{
