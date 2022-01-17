@@ -35,7 +35,7 @@ Setup instructions from source code:
 
 Find Last Epoch's filter folder and add the path to this folder to 'Settings.xml'
 
-Put 'EllyGG Settings.xml' in Last Epoch's filter folder
+Put 'EllyGG_Settings.xml' in Last Epoch's filter folder
 
 Compile and Run the program with your C# editor of choice
 
@@ -46,7 +46,7 @@ Extract the zip folder to whereever you want
 
 Find Last Epoch's filter folder and add the path to this folder to 'Settings.xml'
 
-Put 'EllyGG Settings.xml' in Last Epoch's filter folder
+Put 'EllyGG_Settings.xml' in Last Epoch's filter folder
 
 Run EllyGGEpochFilter.exe
 
@@ -57,6 +57,6 @@ Extract the zip folder to whereever you want
 
 Find Last Epoch's filter folder and add the path to this folder to 'Settings.xml'
 
-Put 'EllyGG Settings.xml' in Last Epoch's filter folder
+Put 'EllyGG_Settings.xml' in Last Epoch's filter folder
 
 Flag 'EllyGGEpochFilter' as executable, then run it
