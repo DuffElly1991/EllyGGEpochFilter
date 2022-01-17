@@ -75,7 +75,7 @@ namespace EllyGGEpochFilter
 
 			Console.WriteLine("Successfully read in settings file \"Settings.xml\"");
 
-			string informationGathererFileName = "EllyGG Information Gatherer.xml";
+			string informationGathererFileName = "EllyGG_Information_Gatherer.xml";
 			if(!FileManager.ReadFile(filterFolder, informationGathererFileName, out settingsFileContent, out errorMessage))
 			{
 				//Error occured, so check the other location 
@@ -101,7 +101,7 @@ namespace EllyGGEpochFilter
 
 			Console.WriteLine("Successfully read in settings file \"" + informationGathererFileName + "\"");
 
-			string filterSettingsFileName = "EllyGG Settings.xml";
+			string filterSettingsFileName = "EllyGG_Settings.xml";
 			Console.WriteLine("Starting filter builder for filter settings file \"" + filterSettingsFileName + "\" in folder \"" + filterFolder + "\"");
 
 			string previousFile = "";

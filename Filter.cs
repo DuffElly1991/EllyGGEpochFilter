@@ -31,9 +31,9 @@ namespace EllyGGEpochFilter
 			{
 				if(child.label == "name")
 				{
-					if(child.value != "EllyGG Information Gatherer")
+					if(child.value != "EllyGG_Information_Gatherer")
 					{
-						outErrorMessage = "Expected to find item filter called \"EllyGG Information Gatherer\", but found \"" + child.value + "\"";
+						outErrorMessage = "Expected to find item filter called \"EllyGG_Information_Gatherer\", but found \"" + child.value + "\"";
 						return false;
 					}
 				}
@@ -182,9 +182,9 @@ namespace EllyGGEpochFilter
 			{
 				if(child.label == "name")
 				{
-					if(child.value != "EllyGG Settings")
+					if(child.value != "EllyGG_Settings")
 					{
-						outErrorMessage = "Expected to find item filter called \"EllyGG Settings\", but found \"" + child.value + "\"";
+						outErrorMessage = "Expected to find item filter called \"EllyGG_Settings\", but found \"" + child.value + "\"";
 						return false;
 					}
 				}
