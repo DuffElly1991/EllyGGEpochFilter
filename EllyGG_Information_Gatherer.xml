@@ -1,5 +1,5 @@
 ﻿<ItemFilter xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-  <name>EllyGG Information Gatherer</name>
+  <name>EllyGG_Information_Gatherer</name>
   <filterIcon>22</filterIcon>
   <filterIconColor>0</filterIconColor>
   <description>This file contains information gathered from in game, for use by the EllyGG filter builder.  Editing it may break the filter builder</description>

@@ -1,5 +1,5 @@
 ﻿<ItemFilter xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-  <name>EllyGG Settings</name>
+  <name>EllyGG_Settings</name>
   <filterIcon>22</filterIcon>
   <filterIconColor>0</filterIconColor>
   <description>Settings file for Elly's Good Gaming Filter - to use: Create a rule that defines your character like "filter for example".  One filter is made per enabled rule.</description>
