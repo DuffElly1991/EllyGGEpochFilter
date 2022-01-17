@@ -649,12 +649,12 @@ namespace EllyGGEpochFilter
 					//Item with tier 16+ any affix
 					conditions = new xmlNode(null, NodeType.dualTagMultiLine, "conditions", null);
 					conditions.addNode(Filter.createAffixCondition(Filter.desirableItemAffixes, CombinedComparisonType.MORE_OR_EQUAL, 16));
-					filterXML.addNode(Filter.createHighlightFilterRule("13", conditions, "Show any item with affixes of combined tier 16+"));
+					filterXML.addNode(Filter.createHighlightFilterRule("13", conditions, "Any item with affixes of combined tier 16+"));
 
 					//Highlight items with tier 20+
 					conditions = new xmlNode(null, NodeType.dualTagMultiLine, "conditions", null);
 					conditions.addNode(Filter.createAffixCondition(Filter.desirableItemAffixes, CombinedComparisonType.MORE_OR_EQUAL, 20));
-					filterXML.addNode(Filter.createHighlightFilterRule("12", conditions, "Show any item with affixes of combined tier 20+"));
+					filterXML.addNode(Filter.createHighlightFilterRule("12", conditions, "Any item with affixes of combined tier 20+"));
 
 					//Unique, set and exalted items
 					{
