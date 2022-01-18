@@ -1,4 +1,4 @@
-Filter builder for Last Epoch
+Elly's Good Gaming Filter builder for Last Epoch
 
 When launched it will monitor for changes to filter templates made in game, and build filters from these templates
 
