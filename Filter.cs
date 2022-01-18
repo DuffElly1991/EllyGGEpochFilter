@@ -232,7 +232,7 @@ namespace EllyGGEpochFilter
 				{
 					runeOfShatteringTargets = rule;
 				}
-				else if(ruleName.StartsWith("example filter"))
+				else if(ruleName.StartsWith("example filter") || ruleName.StartsWith("Example filter"))
 				{
 					//This is an example rule for use as a template, don't create a filter for it
 				}
